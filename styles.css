@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(220, 224, 223);
+  }
+
+header {
+    background-color: #1ddb96;
+    margin: 0;
+    height: 5em;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.openForm {
+    background-color:rgb(6, 6, 184);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: large;
+    margin: 0;
+    color:honeydew;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    top: 1em;
+    right: 28px;
+}
+
+.openForm:hover {
+    opacity: 1;
+}
+
+h1 {
+    margin: 0;
+    /* padding: 0; */
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    gap: 2em;
+    justify-items: center;
+}
+
+.content {
+    border: 1px solid black;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: cornsilk;
+}
+
+h5 {
+    font-style: italic;
+}
+
+.readButton, .deleteButton {
+    width: 30%;
+    border-radius: 10px;
+    opacity: 0.9;
+    height: 3em;
+    border: none;
+}
+
+.readButton {
+    background-color: #04AA6D;
+}
+
+.deleteButton {
+    background-color: red;
+    margin-top: 3px;
+}
+
+.deleteButton:hover, .readButton:hover {
+    opacity: 1;
+}
+
+/* The popup form - hidden by default */
+.formPop {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.formContainer {
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgb(50, 59, 58);
+    color: aliceblue;
+}
+
+/* Full-width input fields of type text */
+.formContainer input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Full-width input fields of type number */
+.formContainer input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.formContainer input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the update button */
+.formContainer .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 33%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.formContainer .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.formContainer .btn:hover, .open-button:hover {
+    opacity: 1;
+}
