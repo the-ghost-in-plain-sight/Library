@@ -116,7 +116,10 @@ openForm.addEventListener('click', function () {
         let inputAuthor = document.querySelector('#author').value;
         let inputPages = document.querySelector('#pages').value;
         let inputRead = document.querySelector("input[name='read']:checked").value;
-        console.log(inputRead);
+        if (inputTitle == '') {
+            alert ('Please enter Book Title');
+            return ;
+        }
         if (inputRead == 'Yes') {
             inputRead = 'Completed';
         } else {
