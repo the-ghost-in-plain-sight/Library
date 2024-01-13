@@ -149,6 +149,6 @@ h5 {
 }
 
 /* Add some hover effects to buttons */
-.formContainer .btn:hover, .open-button:hover {
+.formContainer .btn:hover {
     opacity: 1;
 }
