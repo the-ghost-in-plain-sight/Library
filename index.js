@@ -115,7 +115,14 @@ openForm.addEventListener('click', function () {
         let inputTitle = document.querySelector('#title').value;
         let inputAuthor = document.querySelector('#author').value;
         let inputPages = document.querySelector('#pages').value;
-        let inputRead = document.querySelector('#read').value;
+        let inputRead = document.querySelector("input[name='read']:checked").value;
+        console.log(inputRead);
+        if (inputRead == 'Yes') {
+            inputRead = 'Completed';
+        } else {
+            inputRead = 'In Progress';
+        }
+        
         let liveBook = new Book(inputTitle, inputAuthor, inputPages, inputRead);
         addBookToLibrary(liveBook);
 
