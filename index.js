@@ -1,12 +1,6 @@
 let myLibrary = [];
 
 /* Book constructor */
-/* function Book (title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-} */
 
 class Book {
     constructor (title, author, pages, read) {
@@ -78,7 +72,7 @@ function displayOnPage () {
         item.addEventListener('click', (el) => {
             el.currentTarget.parentNode.remove();
             myLibrary.splice(index, 1);
-            while (books.lastChild) {
+            while (books.lastChild) { // remove all book children in book
                 books.removeChild(books.lastChild);
             }
             displayOnPage();
